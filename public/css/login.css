@@ -1,0 +1,77 @@
+
+/* Custom styles for this template */
+
+body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: center;
+    
+    padding: 50px 0;
+}
+
+.blank {
+	width: 100%;
+	max-width: 400px;
+	padding: 50px;
+	margin: 0 auto;
+}
+
+.blank .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.blank .form-control:focus {
+    z-index: 2;
+}
+
+.blank input[type="login"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.blank input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.blank button {
+    background-color: #0090c0;
+    border-color: #0090c0;
+}
+
+.blank button:hover {
+    background-color: #0090c0;
+    border-color: #0090c0;
+    opacity: 0.5;
+}
+
+.blank .text-color {
+	color: #0090c0;
+}
+
+.blank .opacity {
+	opacity: 0.625;
+}
+
+.blank .response {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: #fff;
+}
+
+.success_color {
+	background-color: #00CC33;
+}
+
+.fail_color {
+	background-color: #FF3333;
+}

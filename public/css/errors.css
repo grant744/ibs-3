@@ -1,0 +1,22 @@
+
+/* Custom styles for this template */
+
+body {
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	justify-content: center;
+  
+	padding: 50px 0;
+}
+  
+.form-error {
+	width: 100%;
+	max-width: 400px;
+	padding: 50px;
+	margin: 0 auto;
+}
+  
+.form-error .opacity {
+	opacity: 0.625;
+}
