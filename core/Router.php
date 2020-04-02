@@ -11,8 +11,6 @@ class Router
 
     public function __construct() 
     {
-        View::languageOperate();
-
         $routes = require 'configs/routes.php';
 
         foreach ($routes as $key => $value) 

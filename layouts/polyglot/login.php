@@ -7,18 +7,20 @@
         <link rel="shortcut icon" href="/public/media/favicon.ico" type="image/x-icon">
 
         <link href="/public/css/bootstrap.css" rel="stylesheet">
+        <link href="/public/css/all.css" rel="stylesheet">
+        <link href="/public/css/common.css" rel="stylesheet">
         <link href="/public/css/login.css" rel="stylesheet">
     </head>
 
     <body class="text-center">
-        <form method="post" enctype="multipart/form-data" class="blank">
+        <form method="post" enctype="multipart/form-data" class="custom-container">
 
 
             <?php echo $content; ?>
 
 
             <div class="input-group">
-                <select class="custom-select language_event">
+                <select class="custom-select language-event">
                     <option <?php if ($_SESSION['language'] == 'en') echo 'selected="selected"'; ?> value="en">English</option>
                     <option <?php if ($_SESSION['language'] == 'ru') echo 'selected="selected"'; ?> value="ru">Русский</option>
                 </select>
@@ -26,6 +28,7 @@
         </form>
 
         <script type="text/javascript" src="/public/js/jquery.js"></script>
-        <script type="text/javascript" src="/public/js/language.js"></script>
+        <script type="text/javascript" src="/public/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/public/js/language-handler.js"></script>
     </body>
 </html>

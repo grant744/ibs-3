@@ -13,6 +13,11 @@ class View
     public function __construct($params) 
     {
         $this->params = $params;
+
+        if (isset($_SESSION['language']) == FALSE) 
+        {
+            $_SESSION['language'] = 'en';
+        }
     }
 
     public function setTitle($string) 
@@ -34,11 +39,6 @@ class View
     {
         $this->vars[$name] = $value;
     }
-    
-    public function getLanguage() 
-    {
-        return $_SESSION['language'];
-	}
 
     // This method automatically finds the layout value
     public function autoLayout() 
@@ -113,11 +113,10 @@ class View
                 extract($this->vars);
             }
 
+            $title = $this->title;
             ob_start();
             require $this->content;
             $content = ob_get_clean();
-            
-            $title = $this->title;
             require $this->layout;
         }
         else
@@ -126,30 +125,11 @@ class View
         }
 	}
 
-    // This method allows you to control the language
-    public static function languageOperate() 
-    {
-        if (isset($_SESSION['language']) == FALSE) 
-        {
-            $_SESSION['language'] = 'en';
-        }
+    public function redirect($url) {
+		header('location: '.$url);
+		exit;
+	}
 
-        if (isset($_GET['language']) == TRUE) 
-        {
-            $_SESSION['language'] = $_GET['language'];
-
-            if (isset($_SERVER['HTTP_REFERER']) == TRUE)
-            {
-                header('location: '.$_SERVER['HTTP_REFERER']);
-                exit;
-            }
-            else
-            {
-                header('location: /');
-                exit;
-            }
-        }
-    }
 
     // This method displays an message
     public static function message($string) 

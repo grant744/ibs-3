@@ -6,8 +6,6 @@ body {
 	display: -webkit-box;
 	display: flex;
 	justify-content: center;
-  
-	padding: 50px 0;
 }
   
 .form-error {

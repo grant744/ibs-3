@@ -56,21 +56,25 @@ class Login extends Model
                 
                 if ($result['password'] == $data['password'])
                 {
-                    return 4;
+                    $this->response = $data['login'];
+                    return true;
                 }
                 else
                 {
-                    return 3;
+                    $this->response = 3;
+                    return false;
                 }
             }
             else
             {
-                return 2;
+                $this->response = 2;
+                return false;
             }
         }
         else
         {
-            return 1;
+            $this->response = 1;
+            return false;
         }
     }
 }

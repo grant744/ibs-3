@@ -19,7 +19,7 @@
             <h1 class="h6 mb-5 font-weight-normal opacity"><?php echo $advice; ?></h1>
 
             <div class="input-group">
-                <select class="custom-select language_event">
+                <select class="custom-select language-event">
                     <option <?php if ($_SESSION['language'] == 'en') echo 'selected="selected"'; ?> value="en">English</option>
                     <option <?php if ($_SESSION['language'] == 'ru') echo 'selected="selected"'; ?> value="ru">Русский</option>
                 </select>
@@ -27,6 +27,6 @@
         </form>
 
         <script type="text/javascript" src="/public/js/jquery.js"></script>
-        <script type="text/javascript" src="/public/js/language.js"></script>
+        <script type="text/javascript" src="/public/js/language-handler.js"></script>
     </body>
 </html>
